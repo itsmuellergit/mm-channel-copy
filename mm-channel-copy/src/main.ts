@@ -11,7 +11,7 @@ async function bootstrap() {
     // Session-Middleware einbinden
     app.use(
         session({
-            secret: 'irgendeinkey', // Verwende hier einen sicheren Schlüssel
+            secret: 'somekey', // Verwende hier einen sicheren Schlüssel
             resave: false,
             saveUninitialized: false,
             cookie: { maxAge: 3600000 }, // Cookie-Lebensdauer in Millisekunden (hier 1 Stunde)

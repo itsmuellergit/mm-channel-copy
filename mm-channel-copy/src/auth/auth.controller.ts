@@ -34,7 +34,7 @@ export class AuthController {
 
             // Mattermost Login via OS Call
             const command = `mmctl auth login ${serverName} --username ${username} --password ${password}  --name mattermost2`;
-           console.log(`[${command}] ${JSON.stringify(body)}`);
+
             execSync(command);
 
             // Login erfolgreich

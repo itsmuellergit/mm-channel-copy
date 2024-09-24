@@ -13,10 +13,10 @@
     {{/if}}
     <form action="/auth/login" method="POST">
         <label for="serverName">Server Name:</label>
-        <input type="text" name="serverName" id="serverName" value="{{serverName}}{{^serverName}}https://itsmueller3.spdns.org{{/serverName}}" required />
+        <input type="text" name="serverName" id="serverName" value="{{serverName}}{{^serverName}}{{/serverName}}" required />
 
         <label for="username">Benutzername:</label>
-        <input type="text" name="username" id="username" value="{{username}}{{^username}}christof{{/username}}" required />
+        <input type="text" name="username" id="username" value="{{username}}{{^username}}{{/username}}" required />
 
         <label for="password">Passwort:</label>
         <input type="password" name="password" id="password" required />

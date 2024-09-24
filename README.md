@@ -7,3 +7,5 @@ cd mm-channel-copy
 npm i
 
 nest start
+
+http://localhost:3000/auth/login
