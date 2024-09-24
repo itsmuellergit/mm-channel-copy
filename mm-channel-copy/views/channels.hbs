@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kanäle auswählen</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="container">
+    <h1>Kanäle aus Quell-Team "{{sourceTeamName}}" auswählen</h1>
+    <p>Ziel-Team: {{targetTeamName}}</p>
+    {{#if error}}
+        <p class="error">{{error}}</p>
+    {{/if}}
+    <form action="/generate" method="POST">
+        <input type="hidden" name="sourceTeamName" value="{{sourceTeamName}}" />
+        <input type="hidden" name="targetTeamName" value="{{targetTeamName}}" />
+        {{#each channels}}
+            <div>
+                <input type="checkbox" name="channels" value='{{json this}}' checked />
+                <label>{{display_name}}</label>
+            </div>
+        {{/each}}
+        <button type="submit">Batch-Datei erstellen</button>
+    </form>
+</div>
+</body>
+</html>

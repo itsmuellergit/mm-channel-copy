@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #005A9E;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
+.arrow i {
+    font-size: 2em;
+    color: #333; /* Oder eine andere Farbe nach Wunsch */
+}
+/* Bestehende Styles... */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.team-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.team-list {
+    flex: 1;
+    margin: 0 10px;
+}
+
+
+.team-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.team-item input[type="radio"] {
+    margin-right: 5px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin: 10px 180px;
+}
+
+/* Button-Styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #005A9E;
+}
+
+/* Fehleranzeige */
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .team-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        margin: 10px 0;
+    }
+}

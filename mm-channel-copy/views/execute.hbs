@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Befehle ausgeführt</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Befehle wurden ausgeführt</h1>
+    {{#each results}}
+        <h3>Befehl:</h3>
+        <pre>{{command}}</pre>
+        <h3>Ergebnis:</h3>
+        <pre>{{output}}</pre>
+        <hr />
+    {{/each}}
+    <a href="/teams">Zurück zum Anfang</a>
+</div>
+</body>
+</html>

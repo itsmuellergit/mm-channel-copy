@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teams auswählen</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="container">
+    <h1>Kopiere von ... nach</h1>
+    {{#if error}}
+        <p class="error">{{error}}</p>
+    {{/if}}
+
+    <form action="/channels" method="POST">
+        <div class="team-selection">
+            <!-- Quell-Team-Liste -->
+            <div class="team-list">
+                <h2>Quell-Team</h2>
+                {{#each teams}}
+                    <div class="team-item">
+                        <input type="radio" name="sourceTeamName" value="{{name}}" required />
+                        <label>{{display_name}}</label>
+                    </div>
+                {{/each}}
+            </div>
+
+            <!-- Pfeil-Symbol -->
+            <div class="arrow">
+                &#8594;
+            </div>
+
+            <!-- Ziel-Team-Liste -->
+            <div class="team-list">
+                <h2>Ziel-Team</h2>
+                {{#each teams}}
+                    <div class="team-item">
+                        <input type="radio" name="targetTeamName" value="{{name}}" required />
+                        <label>{{display_name}}</label>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <button type="submit">Weiter</button>
+    </form>
+</div>
+</body>
+</html>

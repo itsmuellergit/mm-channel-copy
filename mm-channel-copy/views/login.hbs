@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mattermost Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="container">
+    <h1>Mattermost Login</h1>
+    {{#if error}}
+        <p class="error">Login fehlgeschlagen. Bitte versuchen Sie es erneut.</p>
+    {{/if}}
+    <form action="/auth/login" method="POST">
+        <label for="serverName">Server Name:</label>
+        <input type="text" name="serverName" id="serverName" value="{{serverName}}{{^serverName}}https://itsmueller3.spdns.org{{/serverName}}" required />
+
+        <label for="username">Benutzername:</label>
+        <input type="text" name="username" id="username" value="{{username}}{{^username}}christof{{/username}}" required />
+
+        <label for="password">Passwort:</label>
+        <input type="password" name="password" id="password" required />
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+</html>
